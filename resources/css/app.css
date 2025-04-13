@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+body {
+    color: #0a0a0a;
+    background: #fff;
+    font-family: "PolySans Neutral", sans-serif !important;
+    font-size: 15px;
+}
+.transition-bg {
+    transition: background-color 0.3s ease;
+}
+[x-cloak] {
+    display: none;
+}
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rolling-circle {
+    animation: roll 60s linear infinite;
+}
+
+@keyframes custom-bounce {
+    0%, 100% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(-15px);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .animate-custom-bounce {
+    animation: custom-bounce 1.2s infinite;
+  }
+
+  @keyframes spinGlobe {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .globe-spin {
+    animation: spinGlobe 40s linear infinite;
+  }
+
+  .country-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 9999px;
+  }
+
+  .country-label {
+    position: absolute;
+    color: white;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .pulse-box {
+    @apply absolute bg-white/20 backdrop-blur-sm text-white rounded-xl p-4;
+  }
+@layer components {
+    .Resizer {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 576px) {
+        .Resizer {
+            width: 500px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .Resizer {
+            width: 720px;
+        }
+    }
+
+    @media (min-width: 958px) {
+        .Resizer {
+            width: 880px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .Resizer {
+            width: 960px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .Resizer {
+            width: 1140px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .Resizer {
+            width: 1360px;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        .Resizer {
+            width: 1460px;
+        }
+    }
+
+    .Bannersection {
+        padding: 150px 0px 100px 0;
+    }
+
+    .section {
+        padding: 80px 0px;
+    }
+
+    .just {
+        padding: 0px 0px 80px 0px;
+    }
+    .top {
+        padding: 80px 0px 50px 0px;
+    }
+
+    .topping {
+        padding: 80px 0px 20px 0px;
+    }
+
+    .justing {
+        padding: 0px 0px 60px 0px;
+    }
+
+    .Push {
+        margin-top: 80px;
+    }
+
+    .jus {
+        padding: 150px 0px 0px 0px;
+    }
+
+    .juss {
+        padding: 80px 0px 130px 0px;
+    }
+
+    @media (max-width: 1000px) {
+        .section {
+            padding: 60px 0px;
+        }
+    }
+}
+
+.tab-btn {
+    width: 6rem;
+    @media (min-width: 640px) {
+        width: 7rem;
+    }
+}
+.active-tab {
+    border-bottom-width: 1px;
+    border-color: #8b5cf6 !important; /* Tailwind purple-600 */
+    color: #8b5cf6 !important;
+}
