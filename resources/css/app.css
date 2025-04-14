@@ -5,6 +5,7 @@ body {
     background: #fff;
     font-family: "PolySans Neutral", sans-serif !important;
     font-size: 15px;
+    overflow-x: hidden;
 }
 .transition-bg {
     transition: background-color 0.3s ease;
